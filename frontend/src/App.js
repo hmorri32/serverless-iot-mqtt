@@ -129,6 +129,9 @@ class UserNamePrompt extends Component {
       }
       event.preventDefault();
     };
+    {
+      console.log('im editing stuff');
+    }
     return (
       <Modal show={this.state.showModal} bsSize="sm">
         <Form inline onSubmit={onSubmit}>
