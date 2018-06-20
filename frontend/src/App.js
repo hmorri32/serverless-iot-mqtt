@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import './App.css';
@@ -100,6 +99,7 @@ const ChatInput = ({ onSend }) => {
 
 const ChatWindow = ({ users, messages, onSend }) => (
   <div>
+    {console.log({ messages })}
     <Grid fluid>
       <Row>
         <Col xs={3}>
@@ -129,9 +129,6 @@ class UserNamePrompt extends Component {
       }
       event.preventDefault();
     };
-    {
-      console.log('im editing stuff');
-    }
     return (
       <Modal show={this.state.showModal} bsSize="sm">
         <Form inline onSubmit={onSubmit}>
