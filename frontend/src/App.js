@@ -159,7 +159,6 @@ export default class App extends Component {
 
     this.onSend = this.onSend.bind(this);
     this.connect = this.connect.bind(this);
-
     this.state = {
       users: [],
       messages: [],
@@ -170,9 +169,7 @@ export default class App extends Component {
 
   connect(username) {
     this.setState({ username });
-
     this.client = new RealtimeClient(this.state.clientId, username);
-
     this.client.connect().then(() => {
       this.setState({ isConnected: true });
       this.client.onMessageReceived((topic, message) => {

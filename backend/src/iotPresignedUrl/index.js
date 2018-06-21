@@ -23,7 +23,7 @@ exports.handler = (event, context, callback) => {
 
   const response = {
     statusCode: 200,
-    body: JSON.stringify({ url: url }),
+    body: JSON.stringify({ url }),
   };
 
   callback(null, response);
