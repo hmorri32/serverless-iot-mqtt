@@ -87,7 +87,6 @@ export default (clientId, username) => {
         },
       },
     };
-    console.log('messagesent', message);
     client.publish(MESSAGE_TOPIC, JSON.stringify(stateObj));
     console.log(`Sent message: ${MESSAGE_TOPIC} - ${JSON.stringify(message)}`);
     return clientWrapper;
