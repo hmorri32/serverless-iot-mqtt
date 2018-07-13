@@ -24,8 +24,8 @@ export default (clientId, username) => {
       payload: getNotification(clientId, username),
     },
   };
+  
   let client = null;
-
   const clientWrapper = {};
 
   clientWrapper.connect = () => {
